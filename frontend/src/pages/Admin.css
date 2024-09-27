@@ -1,0 +1,135 @@
+
+.add-course h2 {
+    text-align: center;
+    color: #3B82F6;
+    margin-bottom: 20px;
+}
+
+.add-course-div {
+    max-width: 800px;
+    margin: 10px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid gray;
+    border-radius: 10px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+form.add-course div {
+    margin-bottom: 15px;
+}
+
+/* form.add-course label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+} */
+
+form.add-course input[type="text"],
+form.add-course input[type="number"],
+form.add-course select {
+    /* width: calc(100% - 12px); */
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    /* border-radius: 5px; */
+    font-size: 16px;
+    color: #333;
+    transition: border-color 0.3s;
+}
+
+form.add-course input[type="text"]:focus,
+form.add-course input[type="number"]:focus,
+form.add-course textarea:focus,
+form.add-course select:focus {
+    border-color: #3B82F6;
+    outline: none;
+}
+
+form.course-credits input{
+    max-width: 40px;
+}
+form.add-course textarea{
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    width: 90%;
+    height: 150px;
+    margin:0 auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+}
+.course-time h4{
+    font-weight: normal;
+    font-size: 20px;
+    margin: 0;
+    /* text-decoration:underline 1.5px solid #565656; */
+    /* text-underline-offset: 5px; */
+}
+.course-time input{
+    width: 50px;
+}
+
+form.add-course button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+form.add-course button:hover {
+    background-color: #1e62d0;
+    transform: scale(1.005);
+}
+
+.add-course-btn {
+    background-color: #3B82F6;
+    color: #ffffff;
+    width: 100%;
+}
+
+.add-timeTable,
+.cancel-timeTable {
+    background-color: #f87171;
+    color: #ffffff;
+    margin: 10px 0;
+}
+
+.cancel-timeTable {
+    background-color: #f87171;
+}
+
+.add-timeTable {
+    background-color: #22c55e;
+}
+
+.course-time select {
+    margin-right: 10px;
+}
+
+.course-timeTable div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.course-timeTable select {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+

@@ -1,0 +1,272 @@
+/* Course.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0f4f8;
+  color: #444;
+  margin: 0;
+  padding: 0;
+}
+
+.courseInfo {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.courseInfo h2 {
+  /* font-size: 2.5rem; */
+  color: #ff6363;
+  margin-bottom: 0.5rem;
+}
+
+.courseInfo h3 {
+  /* font-size: 2rem; */
+  color: #ffa600;
+  margin-top: 2rem;
+  position: relative;
+}
+
+.courseInfo h3::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 4px;
+  background: #ffa600;
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+}
+
+.courseInfo p {
+  /* font-size: 1.125rem; */
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.course-material {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.course-material th,
+.course-material td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+  /* font-size: 1rem; */
+}
+
+.course-material th {
+  background-color: #ff6363;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.course-material tr:nth-child(even) {
+  background-color: #ffe3e3;
+}
+
+.course-review {
+  margin-top: 2rem;
+}
+
+.create-review form {
+  display: flex;
+  flex-direction: column;
+  background: #fff0e6;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.input-rating label,
+.input-review textarea {
+  margin-bottom: 0.5rem;
+}
+
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: border-color 0.3s ease-in-out;
+  /* font-size: 1rem; */
+  margin-bottom: 1rem;
+}
+
+input[type="number"]:focus,
+textarea:focus {
+  border-color: #ff6363;
+}
+
+.review-submit {
+  padding: 0.75rem 1.5rem;
+  background-color: #ffa600;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  /* font-size: 1rem; */
+  text-transform: uppercase;
+}
+
+.review-submit:hover {
+  background-color: #ff8c00;
+}
+
+.show-review .user-review {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  background-color: #fffbf0;
+  transition: transform 0.3s ease-in-out;
+}
+
+.show-review .user-review:hover {
+  transform: scale(1.02);
+}
+
+.show-review .user-review h4 {
+  margin: 0;
+  color: #ff6363;
+  font-weight: 600;
+}
+
+.show-review .user-review p {
+  margin: 0.5rem 0;
+  color: #777;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .courseInfo {
+    padding: 1rem;
+  }
+
+  /* .courseInfo h2 {
+    font-size: 2rem;
+  }
+
+  .courseInfo h3 {
+    font-size: 1.5rem;
+  } */
+}
+
+
+/* .courseInfo{
+    margin: 20px auto;
+    width: 800px;
+    border: 1px solid gray;
+    padding: 10px 20px;
+    border-radius: 5px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.courseInfo h2{
+    color: #22c55e;
+}
+
+.course-material{
+    border: 1px solid gray;
+    border-collapse: collapse;
+}
+.course-material td{
+    padding: 5px;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+.create-review{
+    border: 1px solid gray;
+    padding: 10px;
+    width: 600px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+#course-rating{
+    padding: 5px 10px;
+}
+
+#course-review{
+    height: 100px;
+    width: 500px;
+    margin: 10px;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.review-submit{
+    background-color: lightgreen;
+    padding: 5px 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+.review-submit:hover{
+    background-color: green;
+    color: white;
+}
+
+.show-review{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}   
+
+.user-review{
+    border: 1px solid gray;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    width: 700px;
+}
+
+.user-review h4, p, p{
+    margin: 0;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px){
+    .create-review{
+        width: auto;
+    }
+    #course-review{
+        width: auto;
+    }
+    .user-review{
+        width: 100%;
+    }
+} */

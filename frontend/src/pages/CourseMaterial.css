@@ -1,0 +1,19 @@
+.add-course-material{
+
+}
+
+.add-files{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #3B82F6;
+    color: #ffffff;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.add-files:hover {
+    background-color: #1e62d0;
+    transform: scale(1.005);
+}

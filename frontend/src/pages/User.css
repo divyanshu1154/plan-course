@@ -1,0 +1,125 @@
+/* User.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  /* background-color: #e0f7fa; */
+  color: #444;
+  margin: 0;
+  padding: 0;
+}
+
+.user-box {
+  max-width: 400px;
+  margin: 5rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.user-box form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-container {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.input-container input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease-in-out;
+  outline: none;
+}
+
+.input-container input:focus {
+  border-color: #00695c;
+}
+
+.input-container input::placeholder {
+  color: transparent;
+}
+
+.input-container label {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  background-color: #fff;
+  color: #aaa;
+  padding: 0 0.25rem;
+  transition: all 0.2s ease-in-out;
+  pointer-events: none;
+  font-size: 1rem;
+}
+
+.input-container input:focus + label,
+.input-container input:not(:placeholder-shown) + label {
+  top: -10px;
+  left: 12px;
+  background-color: #fff;
+  color: #00695c;
+  font-size: 0.875rem;
+}
+
+.user-box button[type="submit"] {
+  padding: 0.75rem 1.5rem;
+  background-color: #00796b;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin-top: 1rem;
+}
+
+.user-box button[type="submit"]:hover {
+  background-color: #004d40;
+}
+
+.user-box p {
+  margin: 1rem 0;
+  color: #004d40;
+  font-weight: 400;
+}
+
+.user-box button {
+  padding: 0.75rem 1.5rem;
+  background-color: transparent;
+  color: #00796b;
+  border: 2px solid #00796b;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  /* font-size: 1rem; */
+  text-transform: uppercase;
+}
+
+.user-box button:hover {
+  background-color: #00796b;
+  color: #fff;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .user-box {
+    padding: 1rem;
+  }
+}
